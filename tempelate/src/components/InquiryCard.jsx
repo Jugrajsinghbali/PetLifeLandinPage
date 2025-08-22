@@ -1,4 +1,4 @@
-/* src/components/InquiryCard.jsx */
+import { Link } from "react-router-dom"
 export default function InquiryCard() {
     return (
         <div className="bg-[#E99572] rounded-3xl p-8 text-center text-white relative max-w-3xl mx-auto mt-12 shadow-lg">
@@ -25,19 +25,18 @@ export default function InquiryCard() {
             </div>
 
             {/* Inquiry button */}
-            <a
-                href="https://jsupport.design/contact/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-white text-[#E99572] font-semibold text-lg px-8 py-3 rounded-full shadow-md 
-             hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
-            >
-                inquiry <span className="ml-2">➝</span>
-            </a>
+                <Link
+                    to="/inquiry"
+                    className="inline-flex items-center justify-center bg-white text-[#E99572] font-semibold text-lg px-8 py-3 rounded-full shadow-md 
+                 hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                >
+                    inquiry <span className="ml-2">➝</span>
+                </Link>
 
             {/* Paw prints (bottom right) */}
             <div className="absolute bottom-4 right-4 text-3xl">🐾</div>
             <div className="absolute bottom-12 right-10 text-2xl">🐾</div>
         </div>
     )
+
 }
